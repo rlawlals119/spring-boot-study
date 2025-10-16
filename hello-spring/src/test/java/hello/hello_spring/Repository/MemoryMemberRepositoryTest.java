@@ -16,13 +16,13 @@ public class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    // 테스트는 순서 상관없이 실행이 되기 때문에 각각의 테스트 후에 리포지토리를 비우지 않으면 에러 발생 가능
-    // 테스트 끝날때마다 레포지토리 지워줌
-    // 콜백 메소드
-    @AfterEach
-    public void afterEach() {
-        repository.clearStore();
-    }
+        // 테스트는 순서 상관없이 실행이 되기 때문에 각각의 테스트 후에 리포지토리를 비우지 않으면 에러 발생 가능
+        // 테스트 끝날때마다 레포지토리 지워줌
+        // 콜백 메소드
+        @AfterEach
+        public void afterEach() {
+            repository.clearStore();
+        }
 
     @Test
     public void save() {
