@@ -1,10 +1,12 @@
 package hello.hello_spring.repository;
 
 import hello.hello_spring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 // option + enter로 implements한 메소드들 오버라이드 가능
+@Repository // 이걸 해야 스프링에서 리포지토리인걸 인식함
 public class MemoryMemberRepository implements  MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
